@@ -15,7 +15,7 @@ const MenuItem = props => (
             <p>Age: {props.bird.age} months</p>
             <p>Sex: {props.bird.sex}</p>
             <p>Weight: {props.bird.weight}kg</p>
-            <p>Price: {props.bird.price}</p>
+            <p>Price: £{props.bird.price}</p>
             <p>Country of Origin: {props.bird.origin}</p>
             <button /*onClick={addToOrder}*/>Add to Order</button>
         </div>
