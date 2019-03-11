@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
-// import '../Order'
+import OrderContainer from '../OrderContainer'
+// import OrderItem from '../OrderItem'
+;
 
 class App extends Component {
   constructor(props){
@@ -8,26 +10,26 @@ class App extends Component {
     this.state={
      arrayOfBirds:[{
       imageUrl: "",
-      name: "",
-      age: "",
-      sex: "",
-      weight: "",
-      price: "",
-      origin:"",
-      stock:"",
-      id: ""// use getshort id.
+      name: "Transylvania Naked Neck",
+      age: "3 months",
+      sex: "female",
+      weight: "4kg",
+      price: "65.99",
+      origin:"Romania",
+      stock:"2",
+      id: "999"// use getshort id.
     }],
-      order: []
-  }
+      order: [[999, 2, "Transylvania naked neck", "65.99"]]
 }
-
-  addToOrder(){
-    return 
-    /// get id of bird based on button click
-    // create array with [stock, price, name, id]
-    // setState({order})
-    // send this id and relevant data to order
   }
+
+  // addToOrder(){
+  //   return 
+  //   /// get id of bird based on button click
+  //   // create array with [stock, price, name, id]
+  //   // setState({order})
+  //   // send this id and relevant data to order
+  // }
   
 
   render() {
@@ -47,8 +49,9 @@ class App extends Component {
             Learn React
           </a>
         </header>
-      {/* <Menu /> */}
-      </div>
+      {/* <Menu />      */}
+      <OrderContainer order={this.state.order}/>
+       </div>
 
     );
   }
