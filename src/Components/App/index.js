@@ -53,8 +53,16 @@ class App extends Component {
       <OrderContainer order={this.state.order}/>
        </div>
 
-    );
-  }
+    render() {
+        return (
+            <div className="App">
+                <header className="App-header">
+                    <Menu />
+                </header>
+                {/* <Menu /> */}
+            </div>
+        );
+    }
 }
 
 export default App;
