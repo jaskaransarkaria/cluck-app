@@ -8,7 +8,7 @@ import OrderItem from "../OrderItem";
 
 const OrderContainer = props => {
   let total = 0;
-  props.order.map(item => (total += item[3]));
+  props.order.map(item => (total += parseInt(item[3])));
   return (
     <div>
       {props.order.map((item, index) => (
